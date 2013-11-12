@@ -18,3 +18,7 @@ Some good docs to read for starters:
 * ssh.md -- how/why to use ssh to access the shell account
 * shell.md -- shell account notes, including directory layout
 * github.md -- using github to update these docs (and other stuff)
+
+Once you've found your bearings you're probably going to want:
+
+* mediawiki.md -- wiki admin notes, eg. upgrading, tweaking settings, etc.
