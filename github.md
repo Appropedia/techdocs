@@ -12,8 +12,20 @@ A repo has been created for technical documentation, at http://github.com/Approp
 intended for techies working on Appropedia to take notes on what they've done, to make things easier for
 those who come after.
 
-This repo has been cloned on the VPS account, under doc/, using the HTTPS cloning method.  To update docs
-direct from the VPS:
+This repo has been cloned on the VPS account, under doc/, using the HTTPS cloning method.  
+
+### Configuration
+
+Whoever's mostly doing work on the VPS, you should set up the git config to use your name/email when
+committing.
+
+    git config --global user.name "Your Name"
+	git config --global user.email you@example.com
+
+(If multiple people are doing work around the same time, this will get messy, and a better solution will
+need to be found. But it'll work for now while there's just one person working here, i.e. me.)
+
+### To update docs direct from the VPS
 
     cd doc/
 	vi somefile.md
