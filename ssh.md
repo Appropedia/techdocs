@@ -1,6 +1,6 @@
 # SSH
 
-Docs on using ssh to access the Appropedia VPS.
+Docs on using ssh to access the Appropedia server.
 
 We should only allow login using ssh with keys (not passwords).
 
@@ -21,11 +21,13 @@ their key, not the account's password.
 
 ## If they don't yet have a key
 
-You should probably be dubious of a tech person who doesn't have an SSH key to login to the VPS and
-doesn't know how to create one for themselves.  But assuming you have good reasons for wanting them to be
-able to login, then tell them to do the following (copy and paste if you like).
+You should probably be dubious of a tech person who doesn't have an SSH
+key to login to the server and doesn't know how to create one for
+themselves.  But assuming you have good reasons for wanting them to be
+able to login, then tell them to do the following (copy and paste if you
+like).
 
-* From the Unix command line, "ssh-keygen".  Default options are fine.  
+* From the Unix command line, "ssh-keygen".  Default options are fine.
 * Choose a passphrase of some kind (don't leave it blank).
 * Two files will be saved:
 
