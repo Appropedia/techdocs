@@ -9,4 +9,7 @@ you will need the following access:
   you can login to the shell.
 * Wiki admin status -- this will give you access to various admin tools
   on the wiki, eg. http://www.appropedia.org/Special:SMWAdmin
+* Trello tech board -- you should have access to the board on
+  http://trello.com/ where Appropedia keeps track of tech tasks to be
+  done.
 
