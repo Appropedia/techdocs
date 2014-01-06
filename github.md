@@ -8,11 +8,18 @@ https://github.com/organizations/Appropedia/teams/564556
 
 ## techdocs repo
 
-A repo has been created for technical documentation, at http://github.com/Appropedia/techdocs.  This is
-intended for techies working on Appropedia to take notes on what they've done, to make things easier for
-those who come after.
+A repo has been created for technical documentation, at
+http://github.com/Appropedia/techdocs.  This is intended for techies
+working on Appropedia to take notes on what they've done, to make things
+easier for those who come after.
 
-This repo has been cloned on the VPS account, under doc/, using the HTTPS cloning method.  
+This repo has been cloned on the VPS account, under doc/, using the
+HTTPS cloning method.  You're probably best off editing the docs from
+there, and pushing them up regularly.
+
+You might be wondering why we don't just keep these docs on the wiki
+itself.  Well, what if the wiki is down?  This means you still have the
+necessary information to get it up and running again.
 
 ### Configuration
 
