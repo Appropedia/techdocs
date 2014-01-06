@@ -136,4 +136,6 @@ then copy the new one into its place, eg.
     rm -rf ~/appropedia.org/extensions/SomeExtension
     mv src/SomeExtension ~/appropedia.org/extensions
 
-
+FUTURE WORK: ideally we should update using version control, as
+described on the MW extensions pages. We do not yet have this set up,
+however.
