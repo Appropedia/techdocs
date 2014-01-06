@@ -83,37 +83,14 @@ overwrite a whole bunch of extensions.
 
 ### Testing SMW upgrade
 
-Real test of site functionality:
+The core thing to test is:
 
 * Go to the medical devices portal,
   http://www.appropedia.org/Portal:Medical_Devices, where you should see
   a variety of medical devices listed.
-* Try creating a device using
-  http://www.appropedia.org/Form:Medical_Device (name it "AAA
-  test device" or similar).  The form should work and create a page.
-* Go to http://www.appropedia.org/Portal:Medical_Devices and click
-  "Refresh" to purge the cache.  The new device should now show up under
-  the appropriate category.
 
-If any of the above doesn't work, here are some possible diagnostic
-tests that might help:
-
-* First, test that the most basic semantic functions work as described
-  under
-  http://semantic-mediawiki.org/wiki/Help:Installation#Testing_your_Installation
-* Try a simple query test using http://www.appropedia.org/Special:Ask,
-  eg. put [[testproperty::Dummypage]] in the query box, and you should
-  see your test page show up in the results.
-* Try running Ask on some real data, eg. put [[Medical Device
-  Topic::Malaria]] in the query box, and see if real medical devices
-  show up.
-* If existing pages aren't showing up in SMW queries or Ask results, try
-  editing and re-saving those pages to refresh their semantic
-  representation in the database.  Note that you'll have to
-  refresh/purge a query page (eg. the medical devices portal) before
-  changes appear.  If this works, then your database needs repairing.
-  You can do this from the SMWAdmin page at
-  http://www.appropedia.org/Special:SMWAdmin
+More detail on testing SMW (which you should *definitely* follow) can be
+found in testing.md.
 
 ### Upgrade extensions
 
