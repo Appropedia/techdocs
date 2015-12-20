@@ -21,7 +21,11 @@ given time.
 For each extension, find it on http://mediawiki.org/ and download the latest version into src/ and unzip
 it.
 
-### Make backups
+### Before starting
+
+Navigate to mediawiki folder, open LocalSettings.php file and add this line:
+
+    $wgReadOnly = 'Maintenance';
 
 Make a database backup and a backup of the wiki directory. Dump them in backups/ for safekeeping.
 
@@ -29,57 +33,44 @@ Make a database backup and a backup of the wiki directory. Dump them in backups/
 
 Instructions here: http://www.mediawiki.org/wiki/Manual:Upgrading
 
-Note that Mediawiki's recommended upgrade process changed around MW
-1.21.  Instead of telling you to un-tar the code directly over your
-existing installation, they recommend doing it in a new directory and
-then copying lots of files across.  Sadly, their docs are buggy and
-incomplete, and this didn't work for us.  Therefore, let's stick with
-the old method for now, which is:
+Clone latest mediawiki core into temp directory, eg: /temp/core
 
-    tar xzvf src/mediawiki-X-Y-X.tar.gz -C appropedia.org/ --strip-components=1
-    cd appropedia.org/maintenance
-    php update.php
+    cd /tmp && git clone https://gerrit.wikimedia.org/r/p/mediawiki/core.git
+    
+Navigate to current mediawiki directory and delete these folders:
+* tests
+* serialized
+* resources
+* mw-config
+* maintenance
+* languages
+* includes
+* docs
+* cache
 
-If you see an error message about PHP version 5.3, you may need to do:
+Move all files from /tmp/code into current meidawiki directory (overwriting)
 
-    /usr/local/bin/php53/bin/php update.php
+Execute update script:
 
-(However, we'll make an alias for that in our .bashrc so hopefully it
-won't be a problem.)
-
-If you are a person from the future, you may want to check the MW
-upgrading docs and see if they are improved, and consider doing their
-new recommended method.  However, at this stage (MW 1.21, November 2013)
-I can't recommend it.
+    cd /current/meidawiki/dir && php maintenance/update.php --quick
+    
+Note: If script produce errors, please follow steps below and run it again.
 
 ### Upgrade SMW
-
-You should do this via the semantic-bundle package, available at
-http://www.mediawiki.org/wiki/Semantic_Bundle
-
-This includes SMW and a bunch of other useful extensions that all work
-together.
 
 Before upgrading, read
 http://semantic-mediawiki.org/wiki/Help:Installation#Upgrading_existing_installations
 as there may be special steps you need to follow if there are major
 changes between versions.
 
-If you require a database refresh (as happened when upgrading to version
-1.8) you should allow several hours for this to run.  As of 1.8, it took
-about 2 hours, but didn't work at first, so consider yourself warned.
+Navigate to mediawiki directory
+Run composer update:
 
-To actually install the semantic-bundle:
+    php composer.phar update
+    
+Run update script:
 
-* Download the bundle into src/
-* Install the bundle as follows:
-
-    tar xzvf src/SemanticBundle-blah-blah.tar.gz -C appropedia.org/extensions
-
-(replacing blah-blah with the version/date, of course.)
-
-Note there is no need for --strip-components.  This should just
-overwrite a whole bunch of extensions.
+    php maintenance/update.php --quick
 
 ### Testing SMW upgrade
 
